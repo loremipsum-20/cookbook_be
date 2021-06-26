@@ -38,21 +38,6 @@ router.post("/", async (req, res) => {
 router.get("/", (req, res) => {
   RecipeSchema.find({}, (err, data) => res.send(data));
 });
-//get all recipes
-//router.get("/api/recipes", (req, res, next) => {
-//  res.json(data.entries);
-//});
-
-//get 1 recipe
-//router.get("/:id", (req, res, next) => {
-//console.log(data[req.params.id]);
-//res.send(data);
-//});
-
-// router.get("/:slug", async (req, res) => {
-//   const recipe = await RecipeSchema.findOne({ slug: req.params.slug });
-//   res.send(recipe);
-// });
 
 router.get("/:slug", async (req, res) => {
   try {
