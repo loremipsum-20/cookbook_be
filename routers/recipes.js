@@ -24,6 +24,7 @@ const RecipeSchema = require("../models/RecipeModel");
 
 router.post("/", async (req, res) => {
   const recipe = new RecipeSchema({
+    name: req.body.name,
     slug: req.body.slug,
     shortDescription: req.body.shortDescription,
     ingredientsList: req.body.ingredientsList,
