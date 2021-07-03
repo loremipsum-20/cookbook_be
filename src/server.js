@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 require("dotenv").config();
 require("./db");
 const recipeRouter = require("../routers/recipes");
@@ -6,6 +7,8 @@ const recipeRouter = require("../routers/recipes");
 
 const app = express();
 const port = process.env.PORT || 8080;
+
+app.use(cors());
 
 app.set("json spaces", 2);
 // We need to use a proper middleware to parse the code

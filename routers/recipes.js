@@ -30,6 +30,7 @@ router.post("/", async (req, res) => {
     time: req.body.time,
     description: req.body.description,
     category: req.body.category,
+    imageURL: req.body.imageURL,
   });
   await recipe.save();
   res.send(recipe);
