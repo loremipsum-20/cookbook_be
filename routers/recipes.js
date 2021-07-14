@@ -2,26 +2,6 @@ const express = require("express");
 const router = express.Router();
 const RecipeSchema = require("../models/RecipeModel");
 
-// router.post("/", async (req, res) => {
-//   // manually inserted new Entry - we don't want this most of the time
-//   // const student = {
-//   //   name: 'Gio',
-//   //   first_name: 'me',
-//   //   email: 'gio@gio.com',
-//   // }
-
-//   const recipe = req.body;
-
-//   // you can use await/async with Try/catch block to catch error
-//   // or you can use promises with .then / .catch
-//   try {
-//     const newRecipe = await RecipeSchema.create(recipe);
-//     console.log(newRecipe);
-//   } catch (err) {
-//     console.log("err creating new recipe", err);
-//   }
-// });
-
 router.post("/", async (req, res) => {
   const recipe = new RecipeSchema({
     name: req.body.name,
